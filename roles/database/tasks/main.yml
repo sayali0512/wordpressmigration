@@ -1,7 +1,9 @@
 --- 
 - name: create a backup
-  state: dump
-  target: /var/www/html/wordpress.sql
+  mysql_db:
+    name: wordpress
+    state: dump
+    target: /var/www/html/wordpress.sql
   
 #- name: copy the database to the development server
  # raw: rsync /var/www/html/wordpress.sql root@192.168.0.69:/home/vagrant/wordpress.sql
