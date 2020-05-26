@@ -3,6 +3,7 @@
 - copy:
     src: dump.sql
     dest: /tmp
+    gather_facts: false 
 
 
 
