@@ -1,6 +1,6 @@
 --- 
 - name: create a backup
-  command: mysqldump -h {{sr_wp_db_server_name}} -u {{sr_wp_db_user}} –p{{sr_wp_db_password}} {{sr_wp_db_name}} > [/home/azureadmin/dump_file.sql]
+  shell: mysqldump -h {{sr_wp_db_server_name}} -u {{sr_wp_db_user}} –p{{sr_wp_db_password}} {{sr_wp_db_name}} > [/home/azureadmin/dump_file.sql]
   register: output
   #ignore_errors: true
   failed_when: output.rc != 0 and output.rc != 255
