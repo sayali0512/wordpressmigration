@@ -3,19 +3,8 @@
   name: wordpress
   state: dump
   target: /var/www/html/wordpress.sql
-  login_host: localhost
-  login_user: root
-  login_password: 123456
+  login_host: {{wp_db_server_name}}
+  login_user: {{wp_db_user}}
+  login_password: {{wp_db_password}}
  
- 
-- name: copy the database to the development server
- raw: rsync /var/www/html/wordpress.sql root@192.168.0.69:/home/vagrant/wordpress.sql
 
-- name: import the database
-  mysql_db:
-  name: wordpress
-  state: import
-  target: /home/vagrant/wordpress.sql
-  login_host: 192.168.0.69
-  login_user: root
-  login_password: '123456'
