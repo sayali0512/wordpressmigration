@@ -2,13 +2,13 @@
 # Database details are taken input from user
 # Below wordpress values are updated runtime 
 # Below are the source database details
-wp_db_server_name: mysql-5nw26r.mysql.database.azure.com
-wp_db_user: dbadmin@mysql-5nw26r
-wp_db_password: iTalent@27
-wp_db_name: wordpress
+sr_wp_db_server_name: mysql-5nw26r.mysql.database.azure.com
+sr_wp_db_user: dbadmin@mysql-5nw26r
+sr_wp_db_password: iTalent@27
+sr_wp_db_name: wordpress
 
 # Below are the source database details
-wp_db_server_name: mysql-ietrxy.mysql.database.azure.com
-wp_db_user: dbadmin@mysql-ietrxy
-wp_db_password: iTalent@27
-wp_db_name: wordpress
+tr_wp_db_server_name: mysql-ietrxy.mysql.database.azure.com
+tr_wp_db_user: dbadmin@mysql-ietrxy
+tr_wp_db_password: iTalent@27
+tr_wp_db_name: wordpress
