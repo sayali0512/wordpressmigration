@@ -1,10 +1,5 @@
 --- 
 - name: create a backup
-  mysql_db:
-  login_host: "{{sr_wp_db_server_name}}"
-  login_user: "{{sr_wp_db_user}}"
-  login_password: "{{sr_wp_db_password}}"
-- name: wordpress
   state: dump
   target: /var/www/html/wordpress.sql
   
