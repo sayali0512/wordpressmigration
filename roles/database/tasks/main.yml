@@ -1,12 +1,12 @@
 --- 
 - name: create a backup
   mysql_db:
-  name: wordpress
-  state: dump
-  target: /var/www/html/wordpress.sql
   login_host: "{{sr_wp_db_server_name}}"
   login_user: "{{sr_wp_db_user}}"
   login_password: "{{sr_wp_db_password}}"
+- name: wordpress
+  state: dump
+  target: /var/www/html/wordpress.sql
   
 #- name: copy the database to the development server
  # raw: rsync /var/www/html/wordpress.sql root@192.168.0.69:/home/vagrant/wordpress.sql
