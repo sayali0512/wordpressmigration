@@ -1,12 +1,8 @@
 --- 
-- name: create a backup
-  mysql_db:
-  name: wordpress
-  state: dump
-  target: /var/www/html/wordpress.sql
-  login_host: "{{wp_db_server_name}}"
-  login_user: "{{wp_db_user}}"
-  login_password: "{{wp_db_password}}" 
+# Copy database dump file to remote host and restore it to database 'my_db'
+- copy:
+    src: dump.sql
+    dest: /tmp
 
 
 
