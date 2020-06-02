@@ -17,4 +17,4 @@
   
 - name: export wordpress site
   command: wp export --dir=/tmp/ --post_type=post --start_date=2020-04-05 --end_date=2020-02-06 --path=/azlamp/html/lampwp.com
-  become: yes
+  
