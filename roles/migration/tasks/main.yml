@@ -1,6 +1,4 @@
 ---
-- import_tasks: wordpress.yml
-
 - name: download wpcli
   get_url:
     dest: "/home/azureadmin"
