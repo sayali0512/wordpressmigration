@@ -4,6 +4,6 @@
     - sshkeyconfig
     - migration 
     
- - hosts: webservers
+- hosts: webservers
   roles:
      - wordpressimport
