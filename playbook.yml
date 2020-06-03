@@ -7,3 +7,4 @@
 - hosts: webservers
   roles:
      - wordpressimport
+     - copyfile
