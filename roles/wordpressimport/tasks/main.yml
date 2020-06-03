@@ -5,7 +5,7 @@
     group: "{{user_name | quote }}"
     mode: 493
     owner: "{{user_name | quote }}"
-    url: ~
+    url: "{{wordpressimporter_url}}"
   name: "Download woocommerce script using get_url"
 - 
   args: 
