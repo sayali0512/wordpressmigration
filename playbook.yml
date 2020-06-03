@@ -3,8 +3,9 @@
   roles:
     - sshkeyconfig
     - export
+    - copyfile
     
 - hosts: webservers
   roles:
      - wordpressimport
-     - copyfile
+  
