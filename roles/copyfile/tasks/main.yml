@@ -1,20 +1,6 @@
 ---
-- name: download wpcli
-  get_url:
-    dest: "/home/azureadmin"
-    group: "www-data"
-    owner: "www-data"
-    url: "https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar"
-  become: yes
+- name: "copy xml file to remote host"
+     command: sshpass -p {{ vm_password | quote }} ssh-copy-id -i /home/tmp/italentdigital.wordpress.2020-06-03.000.xml -o StrictHostKeyChecking=no {{user_name | quote }}@{{ vm_ip | quote }} /home/azureadmin
 
-- name: install wp-cli
-  command: "chmod +x /home/azureadmin/wp-cli.phar"
-  become: yes
 
-- name: move wp-cli
-  command: "mv /home/azureadmin/wp-cli.phar /usr/local/bin/wp"
-  become: yes
-  
-- name: export wordpress site
-  command: wp export --dir=/tmp/ --post_type=post --start_date=2020-04-05 --end_date=2020-02-06 --path=/azlamp/html/lampwp.com
   
