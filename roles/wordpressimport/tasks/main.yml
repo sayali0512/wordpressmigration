@@ -1,8 +1,14 @@
 ---
 -
-  name: "Download wordpress importer from wp cli command"
-  command: "wp plugin install wordpress importer --path='{{webroot}}/wordpress/wp-content/plugins'"
-  
+  get_url:
+    dest: /home/{{user_name | quote }}
+    group: "{{user_name | quote }}"
+    mode: 493
+    owner: "{{user_name | quote }}"
+    url: 
+name: "Download woocommerce script using get_url"
 -
-  name: "Activate wordpress importer with wp cli command"
-  command: "wp plugin activate wordpress importer --path='{{webroot}}/wordpress'"
+  name: "Run a woocommerce script with arguments (using 'cmd' parameter)"
+  shell: /home/{{user_name | quote }}/worrdpressimporter.sh 
+  args:
+    executable: /bin/bash
