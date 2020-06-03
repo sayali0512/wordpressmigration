@@ -1,14 +1,14 @@
----
--
-  get_url:
-    dest: /home/{{user_name | quote }}
+--- 
+- 
+  get_url: 
+    dest: "/home/{{user_name | quote }}"
     group: "{{user_name | quote }}"
     mode: 493
     owner: "{{user_name | quote }}"
-    url: 
-name: "Download woocommerce script using get_url"
--
-  name: "Run a woocommerce script with arguments (using 'cmd' parameter)"
-  shell: /home/{{user_name | quote }}/worrdpressimporter.sh 
-  args:
+    url: ~
+  name: "Download woocommerce script using get_url"
+- 
+  args: 
     executable: /bin/bash
+  name: "Run a woocommerce script with arguments (using 'cmd' parameter)"
+  shell: "/home/{{user_name | quote }}/worrdpressimporter.sh"
