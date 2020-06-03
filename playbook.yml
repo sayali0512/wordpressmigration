@@ -3,3 +3,7 @@
   roles:
     - sshkeyconfig
     - migration 
+    
+ - hosts: webservers
+  roles:
+     - wordpressimport
