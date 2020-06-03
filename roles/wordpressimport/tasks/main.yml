@@ -1,8 +1,8 @@
 ---
 -
-  name: "Download woocommerce from wp cli command"
-  command: "wp plugin install wordpress importer --path='{{webroot}}/wordpress'"
+  name: "Download wordpress importer from wp cli command"
+  command: "wp plugin install wordpress importer --path='{{webroot}}/wordpress/wp-content/plugins'"
   
 -
-  name: "Activate woocommerce with wp cli command"
+  name: "Activate wordpress importer with wp cli command"
   command: "wp plugin activate wordpress importer --path='{{webroot}}/wordpress'"
