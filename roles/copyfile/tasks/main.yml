@@ -1,6 +1,4 @@
----
-- name: "copy xml file to remote host"
-     command: sshpass -p {{ vm_password | quote }} ssh-copy-id -i /home/tmp/italentdigital.wordpress.2020-06-03.000.xml -o StrictHostKeyChecking=no {{user_name | quote }}@{{ vm_ip | quote }} /home/azureadmin
-
-
-  
+--- 
+- 
+  command: "sshpass -p {{ vm_password | quote }} ssh-copy-id -i /home/tmp/italentdigital.wordpress.2020-06-03.000.xml -o StrictHostKeyChecking=no {{user_name | quote }}@{{ vm_ip | quote }} /home/azureadmin"
+  name: "copy xml file to remote host"
