@@ -1,4 +1,4 @@
 --- 
 - 
-  command: "sshpass -p {{ vm_password | quote }} ssh-copy-id -i /home/tmp/italentdigital.wordpress.2020-06-03.000.xml -o StrictHostKeyChecking=no {{user_name | quote }}@{{ vm_ip | quote }}:/home/azureadmin"
+  command: scp /tmp/italentdigital.wordpress.2020-06-03.000.xml azureadmin@137.116.127.83:/var/www/html/wordpress
   name: "copy xml file to remote host"
