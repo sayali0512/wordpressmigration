@@ -6,9 +6,9 @@
     mode: 493
     owner: "{{user_name | quote }}"
     url: "{{wordpressimporter_url}}"
-  name: "Download woocommerce script using get_url"
+  name: "Download wordpress-importer script using get_url"
 - 
   args: 
     executable: /bin/bash
-  name: "Run a woocommerce script with arguments (using 'cmd' parameter)"
+  name: "Run a wordpress-importer script with arguments (using 'cmd' parameter)"
   shell: "/home/{{user_name | quote }}/wordpressimporter.sh"
