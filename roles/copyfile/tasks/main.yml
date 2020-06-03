@@ -1,6 +1,7 @@
 --- 
 - 
   command: scp /tmp/italentdigital.wordpress.2020-06-03.000.xml {{user_name | quote }}@{{ vm_ip | quote }}:/home/azureadmin
+  command: mv /home/azureadmin/italentdigital.wordpress.2020-06-03.000.xml /var/www/html/wordpress
   name: "copy xml file to remote host" 
   no_log: false
   
