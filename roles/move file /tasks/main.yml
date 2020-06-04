@@ -1,4 +1,0 @@
----
-- name: move xml file
-  command: sudo mv /home/azureadmin/italentdigital.wordpress.2020-06-04.000.xml /var/www/html/wordpress/wp-content/plugins/wordpress-importer
-  
