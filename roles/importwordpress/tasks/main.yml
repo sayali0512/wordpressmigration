@@ -1,3 +1,3 @@
 ---
 - name: import wordpress site
-  command: wp --authors=create import italentdigital.wordpress.2020-06-04.000.xml
+  command: wp --authors=create import /home/azureadmin/italentdigital.wordpress.2020-06-04.000.xml
