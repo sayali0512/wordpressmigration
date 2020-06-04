@@ -9,6 +9,5 @@
   roles:
      - wordpressimport
      - movefile
-     - replication
      - importwordpress
-  
+     - replication
