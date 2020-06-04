@@ -1,4 +1,5 @@
 ---
 - name: import wordpress site
-  command: sudo -u azureadmin -i wp import /azlamp/html/lampwordpress.com/italentdigital.wordpress.2020-06-04.000.xml --authors=create
+  echo "import wordpress site"
+  command: sudo -u azureadmin -i wp import /azlamp/html/lampwordpress.com/italentdigital.wordpress.2020-06-04.000.xml --authors=create >> /home/azureadmin/var.txt
   become: true
