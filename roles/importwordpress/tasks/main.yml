@@ -1,4 +1,4 @@
 ---
 - name: import wordpress site
-  command:wp import /var/www/html/wordpress/plugins/wordpress-importer/italentdigital.wordpress.2020-06-04.000.xml --authors=create
+  command: wp import /var/www/html/wordpress/plugins/wordpress-importer/italentdigital.wordpress.2020-06-04.000.xml --authors=create
   become: true
