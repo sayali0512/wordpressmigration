@@ -16,7 +16,7 @@ auto_up_disable: true
 
 # user_name and domain_name values are updated at runtime with user input
 server_hostname: wordpress
-domain_name: domain
+domain_name: lampwordpress.com
 user_name: azureadmin
 vm_password: iTalent@27
 vm_ip: 137.116.127.83
