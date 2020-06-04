@@ -8,5 +8,5 @@
 - hosts: webservers
   roles:
      - wordpressimport
-     - importfile
+     - importwordpress
   
