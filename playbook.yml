@@ -8,6 +8,6 @@
 - hosts: webservers
   roles:
      - wordpressimport
-     - move file
+     - movefile
      - importwordpress
   
