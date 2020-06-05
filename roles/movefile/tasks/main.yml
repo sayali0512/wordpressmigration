@@ -3,6 +3,6 @@
   command: mv /var/www/html/wordpress/wp-content/plugins/wordpress-importer /azlamp/html/lampwordpress.com/wp-content/plugins/
   become: true
 - name: move xml file
-  command: mv /home/azureadmin/italentdigital.wordpress.2020-06-05.000.xml  /azlamp/html/lampwordpress.com 
+  command: mv /home/azureadmin/italentdigital.wordpress.2020-06-05.000.xml /azlamp/html/lampwordpress.com 
   become: true 
 
