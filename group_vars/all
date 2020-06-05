@@ -19,7 +19,7 @@ server_hostname: wordpress
 domain_name: lampwordpress.com
 user_name: azureadmin
 vm_password: iTalent@27
-vm_ip: 137.116.127.83
+vm_ip: 52.149.166.161
 dns_name: domain
 
 # WordPress Latest Version
