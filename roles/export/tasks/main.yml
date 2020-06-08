@@ -5,18 +5,14 @@
     group: "{{default_permission}}"
     owner: "{{default_permission}}"
     url: "{{wp_cli_url}}"
-  become: yes
 
 - name: install wp-cli
   command: "chmod +x /home/{{user_name}}/wp-cli.phar"
-  become: yes
 
 - name: move wp-cli
   command: "mv /home/{{user_name}}/wp-cli.phar /usr/local/bin/wp"
-  become: yes
-- 
-  become: true
-  file: 
+-
+  file:
   group: "{{default_permission}}"
   mode: 493
   owner: "{{default_permission}}"
@@ -25,4 +21,3 @@
   name: "Create xml directory"
 - name: export xml file
   command: wp export --dir=/tmp/wp-xml --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}
-  
