@@ -5,12 +5,15 @@
     group: "{{default_permission}}"
     owner: "{{default_permission}}"
     url: "{{wp_cli_url}}"
+  become: yes
 
 - name: install wp-cli
   command: "chmod +x /home/{{user_name}}/wp-cli.phar"
+  become: yes
 
 - name: move wp-cli
   command: "mv /home/{{user_name}}/wp-cli.phar /usr/local/bin/wp"
+  become: yes
 -
   file:
     group: "{{default_permission}}"
