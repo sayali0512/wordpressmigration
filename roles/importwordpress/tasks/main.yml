@@ -1,4 +1,4 @@
 ---
 - name: import wordpress site
-  command: sudo -u azureadmin wp import italentdigital.wordpress.2020-06-04.000.xml --authors=create --path=/azlamp/html/lampwordpress.com
+  command: sudo -u {{ user_name }} wp import wp_export.xml --authors=create --path=/azlamp/html/{{ domain_name }}
   
