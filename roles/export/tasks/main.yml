@@ -17,7 +17,7 @@
 -
   file:
     group: "{{default_permission}}"
-    mode: 777
+    command: chmod 777 /tmp/wp-xml
     owner: "{{default_permission}}"
     path: /tmp/wp-xml
     state: directory
