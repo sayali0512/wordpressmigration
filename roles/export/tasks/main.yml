@@ -14,14 +14,10 @@
 - name: move wp-cli
   command: "mv /home/{{user_name}}/wp-cli.phar /usr/local/bin/wp"
   become: yes
--
-  file:
-    group: "{{default_permission}}"
-    command: chmod 777 /tmp/wp-xml
-    owner: "{{default_permission}}"
-    path: /tmp/wp-xml
-    state: directory
-  name: "Create xml directory"
+- name: create xml directory
+ command: mkdir /tmp/wp-xml
+-name: change permissions
+ command: chmod 777 /tmp/wp-xml
 - name: export xml file
   command: wp export --dir=/tmp/wp-xml --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}
 - name: rename file
