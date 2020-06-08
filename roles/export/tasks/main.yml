@@ -16,5 +16,7 @@
   become: yes
   
 - name: export wordpress site
-  command: wp export --dir=/tmp/ --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}
+  command: mkdir wp-xml
+  command: chmod 777 -R /tmp
+  command: wp export --dir=/tmp/wp-xml --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}
   
