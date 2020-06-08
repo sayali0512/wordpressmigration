@@ -16,5 +16,5 @@
   become: yes
   
 - name: export wordpress site
-  command: wp export --dir=/tmp/ --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/lampwordpress.com
+  command: wp export --dir=/tmp/ --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}
   
