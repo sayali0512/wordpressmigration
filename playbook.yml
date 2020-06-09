@@ -3,10 +3,13 @@
   roles:
     - sshkeyconfig
     - export
+    - databaseexport
     - copyxmlfile
+    
     
 - hosts: webservers
   roles:
+     - databaseimport
      - wordpressimporter
      - movexmlfile
      - importwordpress
