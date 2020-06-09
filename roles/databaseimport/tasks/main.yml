@@ -1,6 +1,10 @@
---- 
-- 
-  command: scp /tmp/italentdigital.wordpress.2020-06-05.000.xml {{user_name | quote }}@{{ vm_ip | quote }}:/home/azureadmin
-  name: "copy xml file to remote host" 
-  no_log: false
+---
+-
+  name: create a database
+  command: mysql -h mysql-iyhnpt.mysql.database.azure.com -u  dbadmin@mysql-iyhnpt -piTalent@27 -e "CREATE DATABASE wordpress1 CHARACTER SET utf8;"
+  register: output
+- debug: var=output.stdout_lines
+
+- name: import database
+  shell: mysql -u dbadmin@mysql-iyhnpt -piTalent@27 wordpress1 < /home/azureadmin/database.sql
   
