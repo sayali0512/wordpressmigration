@@ -14,10 +14,10 @@ wp_db_user_src: dbadmin@mysql-z5k74i
 wp_db_password_src: iTalent@27
 wp_db_name_src: wordpress
 
-wp_db_server_name_src: mysql-iyhnpt.mysql.database.azure.com
-wp_db_user_src: dbadmin@mysql-iyhnpt
-wp_db_password_src: iTalent@27
-wp_db_name_src: wordpress
+wp_db_server_name_tar: mysql-iyhnpt.mysql.database.azure.com
+wp_db_user_tar: dbadmin@mysql-iyhnpt
+wp_db_password_tar: iTalent@27
+wp_db_name_tar: wordpress
 
 
 
