@@ -1,6 +1,4 @@
---- 
-- 
-  command: scp /tmp/italentdigital.wordpress.2020-06-05.000.xml {{user_name | quote }}@{{ vm_ip | quote }}:/home/azureadmin
-  name: "copy xml file to remote host" 
-  no_log: false
+---
+- name: export database
+  shell: mysqldump -h mysql-z5k74i.mysql.database.azure.com -u dbadmin@mysql-z5k74i -p'iTalent@27' wordpress > /home/azureadmin/database.sql
   
