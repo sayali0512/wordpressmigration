@@ -4,3 +4,8 @@
   name: "copy xml file to remote host" 
   no_log: false
   
+- 
+  command: scp /home/azureadmin/database.sql {{user_name | quote }}@{{ vm_ip | quote }}:/home/{{user_name}}
+  name: "copy .sql file to remote host" 
+  no_log: false
+  
