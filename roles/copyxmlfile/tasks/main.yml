@@ -1,6 +1,6 @@
 --- 
 - 
-  command: scp /home{{user_name}}/wp_export.xml {{user_name | quote }}@{{ vm_ip | quote }}:/home/{{user_name}}
+  command: scp /home/{{user_name}}/wp_export.xml {{user_name | quote }}@{{ vm_ip | quote }}:/home/{{user_name}}
   name: "copy xml file to remote host" 
   no_log: false
   
