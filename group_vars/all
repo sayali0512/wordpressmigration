@@ -9,6 +9,17 @@ user_name: azureadmin
 vm_password: iTalent@27
 vm_ip: 52.149.166.161
 dns_name: domain
+wp_db_server_name_src: mysql-z5k74i.mysql.database.azure.com
+wp_db_user_src: dbadmin@mysql-z5k74i
+wp_db_password_src: iTalent@27
+wp_db_name_src: wordpress
+
+wp_db_server_name_src: mysql-iyhnpt.mysql.database.azure.com
+wp_db_user_src: dbadmin@mysql-iyhnpt
+wp_db_password_src: iTalent@27
+wp_db_name_src: wordpress
+
+
 
 xml_path: /tmp/wp-xml
 
