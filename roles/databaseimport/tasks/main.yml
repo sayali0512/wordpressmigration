@@ -1,10 +1,10 @@
 ---
 -
   name: create a database
-  command: mysql -h mysql-iyhnpt.mysql.database.azure.com -u  dbadmin@mysql-iyhnpt -piTalent@27 -e "CREATE DATABASE wordpress1 CHARACTER SET utf8;"
+  command: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} -e "CREATE DATABASE wordpress1 CHARACTER SET utf8;"
   register: output
 - debug: var=output.stdout_lines
 
 - name: import database
-  shell:  mysql -h mysql-iyhnpt.mysql.database.azure.com -u dbadmin@mysql-iyhnpt -piTalent@27 wordpress1 < /home/azureadmin/database.sql
+  shell:  mysql -h {wp_db_server_name_tar}} -u {{wp_db_user_tar} -p{{wp_db_password_tar}} wordpress1 < /home/azureadmin/database.sql
   
