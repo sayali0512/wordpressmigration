@@ -26,6 +26,6 @@
   command: "wp export --dir={{xml_path}} --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}"
 
 - name: move xml file
-  command: "mv {{xml_path}}/ {{xml_path}}/wp_export.xml"
+  command: "mv {{xml_path}}/ /home/azureadmin/wp_export.xml"
   
   
