@@ -26,7 +26,7 @@
   command: "wp export --dir={{xml_path}} --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}"
 
 - name: move xml file
-  command: mv "/tmp/wp-xml"/* "/home/azureadmin/wp_export.xml"
+  command: mv "/tmp/wp-xml"/*  "/home/azureadmin/wp_export.xml"
 
 - name: change permissions
   command: chmod 755 /home/azureadmin/wp_export.xml
