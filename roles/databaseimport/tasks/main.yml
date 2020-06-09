@@ -6,5 +6,5 @@
 - debug: var=output.stdout_lines
 
 - name: import database
-  shell: mysql -u dbadmin@mysql-iyhnpt -piTalent@27 wordpress1 < /home/azureadmin/database.sql
+  shell:  mysql -h mysql-iyhnpt.mysql.database.azure.com -u dbadmin@mysql-iyhnpt -piTalent@27 wordpress1 < /home/azureadmin/database.sql
   
