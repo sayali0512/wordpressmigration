@@ -23,7 +23,7 @@
   become: yes
   
 - name: export xml file
-  command: "wp export --dir={{xml_path}} --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --path=/azlamp/html/{{ domain_name}}"
+  command: "wp export --dir={{xml_path}} --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --filename_format=wordpress.xml --path=/azlamp/html/{{ domain_name}}"
 
 - name: move xml file
   command: mv /tmp/wp-xml/italentdigital.wordpress.2020-06-09.000.xml  /home/azureadmin/wp_export.xml
