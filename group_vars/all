@@ -10,7 +10,7 @@ vm_password: iTalent@27
 vm_ip: 52.149.166.161
 dns_name: domain
 
-
+xml_path: /tmp/wp-xml
 
 #defaultpath
 default_permission: www-data
@@ -22,6 +22,6 @@ wp_salt_path: https://api.wordpress.org/secret-key/1.1/salt/
 wp_cli_url: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 wordpressimporter_plugin_url: https://downloads.wordpress.org/plugin/woocommerce.
 wordpressimporter_url: https://raw.githubusercontent.com/sayali0512/ansible-script/master/wordpressimporter.sh
-wordpressimporter_script_name: wordpressimporter.sh
+woocommerce_script_name: wordpressimporter.sh
 replication_url: https://raw.githubusercontent.com/ummadisudhakar/LAMP/ansible_playbook_mat32/scripts/wordpress_replication.sh
 replication_name: wordpress_replication.sh
