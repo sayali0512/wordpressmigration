@@ -1,4 +1,4 @@
 ---
 - name: export database
-  shell: mysqldump -h {{wp_db_server_name_src}} -u {{wp_db_user_src}} -p{{wp_db_password_src}} {{wp_db_name_src}} > /home/azureadmin/database.sql
+  shell: mysqldump -h {{wp_db_server_name_src}} -u {{wp_db_user_src}} -p{{wp_db_password_src}} {{wp_db_name_src}} > /home/{{user_name}}/database.sql
   
