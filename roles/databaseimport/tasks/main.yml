@@ -1,10 +1,14 @@
 ---
--
-  name: create a database
-  command: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} -e "CREATE DATABASE wordpress1 CHARACTER SET utf8;"
-  register: output
-- debug: var=output.stdout_lines
-
 - name: import database
-  shell: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} wordpress1 < /home/{{user_name}}/database.sql
+  command: wp db export backup_name.sql
+
+
+#-
+ # name: create a database
+  #command: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} -e "CREATE DATABASE wordpress1 CHARACTER SET utf8;"
+  #register: output
+#- debug: var=output.stdout_lines
+
+#- name: import database
+#  shell: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} wordpress1 < /home/{{user_name}}/database.sql
   
