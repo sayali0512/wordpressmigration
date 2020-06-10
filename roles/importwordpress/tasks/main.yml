@@ -1,4 +1,21 @@
 ---
+
+- name: download wpcli
+  get_url:
+    dest: "/home/{{user_name}}"
+    group: "{{default_permission}}"
+    owner: "{{default_permission}}"
+    url: "{{wp_cli_url}}"
+  become: yes
+
+- name: install wp-cli
+  command: "chmod +x /home/{{user_name}}/wp-cli.phar"
+  become: yes
+
+- name: move wp-cli
+  command: "mv /home/{{user_name}}/wp-cli.phar /usr/local/bin/wp"
+  become: yes
+  
 - name: import wordpress site
   command: "wp import /azlamp/html/{{domain_name}}/wordpress.xml --authors=create --path=/azlamp/html/{{domain_name}}"
   
