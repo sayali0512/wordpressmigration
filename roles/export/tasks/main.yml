@@ -16,16 +16,18 @@
   become: yes
   
 - name: create xml directory
-  command: mkdir /tmp/wp-xml
+  command: mkdir {{xml_path}}
   
 - name: change permissions
-  command: chmod 777 /tmp/wp-xml
+  command: chmod 777 {{xml_path}}
   become: yes
   
 - name: export xml file
   command: "wp export --dir={{xml_path}} --post_type=post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block --filename_format=wordpress.xml --path=/azlamp/html/{{ domain_name}}"
 
-
+- name: change permissions
+  command: chmod 755 {{xml_path}}
+  become: yes
 
   
   
