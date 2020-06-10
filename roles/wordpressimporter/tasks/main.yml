@@ -11,4 +11,4 @@
   args: 
     executable: /bin/bash
   name: "Run a wordpress-importer script with arguments (using 'cmd' parameter)"
-  shell: "/home/{{user_name | quote }}/wordpressimporter.sh"
+  shell: "/home/{{user_name | quote }}/{{woocommerce_script_name}}"
