@@ -1,4 +1,4 @@
 ---
 - name: import wordpress site
-  command: sudo -u {{ user_name }} wp import wordpress.xml --authors=create --path=/azlamp/html/{{ domain_name }}
+  command: sudo -u {{user_name}} wp import wordpress.xml --authors=create --path=/azlamp/html/{{domain_name}}
   
