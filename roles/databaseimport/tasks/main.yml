@@ -6,5 +6,5 @@
 - debug: var=output.stdout_lines
 
 - name: import database
-  shell:  mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar} -p{{wp_db_password_tar}} wordpress1 < /home/{{user_name}}/database.sql
+  shell: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar} -p{{wp_db_password_tar}} wordpress1 < /home/{{user_name}}/database.sql
   
