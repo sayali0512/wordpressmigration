@@ -1,14 +1,15 @@
----
-- name: import database
-  command: wp db export backup_name.sql
 
-
-#-
- # name: create a database
-  #command: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} -e "CREATE DATABASE wordpress1 CHARACTER SET utf8;"
-  #register: output
-#- debug: var=output.stdout_lines
-
-#- name: import database
-#  shell: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} wordpress1 < /home/{{user_name}}/database.sql
-  
+--- 
+- 
+  get_url: 
+    dest: "/home/{{user_name | quote }}"
+    group: "{{user_name | quote }}"
+    mode: 493
+    owner: "{{user_name | quote }}"
+    url: "{{wordpressimporter_url}}"
+  name: "Download sql_dump.sh script using get_url"
+- 
+  args: 
+    executable: /bin/bash
+  name: "Run a wordpress-importer script with arguments (using 'cmd' parameter)"
+  shell: "/home/{{user_name | quote }}/sql_dump.sh
