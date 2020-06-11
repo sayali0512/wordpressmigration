@@ -6,10 +6,10 @@
     group: "{{user_name | quote }}"
     mode: 493
     owner: "{{user_name | quote }}"
-    url: "{{wordpressimporter_url}}"
+    url: "{{sql_dump_url}}"
   name: "Download sql_dump.sh script using get_url"
 - 
   args: 
     executable: /bin/bash
-  name: "Run a wordpress-importer script with arguments (using 'cmd' parameter)"
+  name: "Run a sql_dump.sh script with arguments (using 'cmd' parameter)"
   shell: "/home/{{user_name | quote }}/sql_dump.sh
