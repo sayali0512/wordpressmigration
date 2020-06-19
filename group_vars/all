@@ -4,7 +4,8 @@ auto_up_disable: true
 
 # user_name and domain_name values are updated at runtime with user input
 server_hostname: wordpress
-domain_name: lb-543smx.eastus.cloudapp.azure.com
+src_domain_name: lb-543smx.eastus.cloudapp.azure.com
+tar_domain_name: lb-nxi7pz.eastus2.cloudapp.azure.com
 user_name: azureadmin
 vm_password: iTalent@27
 vm_ip: 40.65.225.181
@@ -22,6 +23,8 @@ wp_db_name_tar: wordpressdb
 post_type: post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block
 file_format: wordpress.xml
 
+src_wordpress_path: /azlamp/html/{{src_domain_name}}
+tar_wordpress_path: /azlamp/html/{{tar_domain_name}}
 
 xml_path: /tmp/wp-xml
 
@@ -36,6 +39,6 @@ wp_cli_url: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 wordpressimporter_url: https://raw.githubusercontent.com/sayali0512/ansible-script/master/wordpressimporter.sh
 sql_dump_url: https://raw.githubusercontent.com/sayali0512/ansible-script/master/sql_dump.sh
 sql_dump_script_name: sql_dump.sh
-woocommerce_script_name: wordpressimporter.sh
+wordpress_importer_script_name: wordpressimporter.sh
 replication_url: https://raw.githubusercontent.com/ummadisudhakar/LAMP/ansible_playbook_mat32/scripts/wordpress_replication.sh
 replication_name: wordpress_replication.sh
