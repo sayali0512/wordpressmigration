@@ -20,7 +20,7 @@ wp_db_password_tar: iTalent@27
 wp_db_name_tar: wordpressdb
 
 post_type: post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block
-
+file_format: wordpress.xml
 
 
 xml_path: /tmp/wp-xml
