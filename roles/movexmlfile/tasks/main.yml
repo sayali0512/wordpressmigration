@@ -1,6 +1,6 @@
 ---
 - name: move wordpress-importer file
-  command: mv {{webroot}}/wordpress/wp-content/plugins/wordpress-importer /azlamp/html/{{domain_name}}/wp-content/plugins/
+  command: mv {{webroot}}/wordpress/wp-content/plugins/wordpress-importer /azlamp/html/lb-nxi7pz.eastus2.cloudapp.azure.com/wp-content/plugins/
   become: true
 - name: move xml file
   command: mv /home/{{user_name}}/wordpress.xml /azlamp/html/{{domain_name}}
