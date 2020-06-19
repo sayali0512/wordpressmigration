@@ -15,6 +15,15 @@ wp_db_user_src: dbadmin@mysql-543smx
 wp_db_password_src: iTalent@27
 wp_db_name_src: wordpress
 
+
+wp_db_server_name_src: mysql-nxi7pz.mysql.database.azure.com
+wp_db_user_src: dbadmin@mysql-nxi7pz
+wp_db_password_src: iTalent@27
+wp_db_name_src: wordpressdb
+
+
+
+
 # Password will be auto generated
 wp_admin_password: 
 wp_db_user_pass:
