@@ -1,7 +1,7 @@
 ---
 
 - name: activate wordpress-importer 
-  command: "wp plugin activate wordpress-importer"
+  command: "wp plugin activate wordpress-importer --path=/azlamp/html/lb-nxi7pz.eastus2.cloudapp.azure.com"
   
   
 - name: download wpcli
