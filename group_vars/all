@@ -7,15 +7,15 @@ server_hostname: wordpress
 domain_name: lampwordpress.com
 user_name: azureadmin
 vm_password: iTalent@27
-vm_ip: 52.149.166.161
+vm_ip: 40.65.225.181
 dns_name: domain
-wp_db_server_name_src: mysql-z5k74i.mysql.database.azure.com
-wp_db_user_src: dbadmin@mysql-z5k74i
+wp_db_server_name_src: mysql-543smx.mysql.database.azure.com
+wp_db_user_src: dbadmin@mysql-543smx
 wp_db_password_src: iTalent@27
 wp_db_name_src: wordpress
 
-wp_db_server_name_tar: mysql-iyhnpt.mysql.database.azure.com
-wp_db_user_tar: dbadmin@mysql-iyhnpt
+wp_db_server_name_tar: mysql-nxi7pz.mysql.database.azure.com
+wp_db_user_tar: dbadmin@mysql-nxi7pz
 wp_db_password_tar: iTalent@27
 wp_db_name_tar: wordpress
 
@@ -31,7 +31,6 @@ wordpress_path: /tmp/wordpress
 wp_salt_path: https://api.wordpress.org/secret-key/1.1/salt/
 
 wp_cli_url: https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
-wordpressimporter_plugin_url: https://downloads.wordpress.org/plugin/woocommerce.
 wordpressimporter_url: https://raw.githubusercontent.com/sayali0512/ansible-script/master/wordpressimporter.sh
 sql_dump.sh: https://raw.githubusercontent.com/sayali0512/ansible-script/master/sql_dump.sh
 woocommerce_script_name: wordpressimporter.sh
