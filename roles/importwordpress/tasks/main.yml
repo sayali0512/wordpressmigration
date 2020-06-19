@@ -2,6 +2,8 @@
 
 - name: activate wordpress-importer 
   command: wp plugin activate wordpress-importer
+  
+  
 - name: download wpcli
   get_url:
     dest: "/home/{{user_name}}"
