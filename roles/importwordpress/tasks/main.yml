@@ -17,5 +17,5 @@
   become: yes
   
 - name: import wordpress site
-  command: "wp import /azlamp/html/{{domain_name}}/wordpress.xml --authors=create --path=/azlamp/html/{{domain_name}}"
+  command: "wp import /azlamp/html/{{domain_name}}/wordpress.xml --authors=create --path=/azlamp/html/lb-nxi7pz.eastus2.cloudapp.azure.com"
   
