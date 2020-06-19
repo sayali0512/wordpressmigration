@@ -1,9 +1,6 @@
 
 --- 
 
-- name: Install sql for mysqldump
-  command: apt-get install mysql-server mysql-common mysql-client
-  become: yes
 - 
   get_url: 
     dest: "/home/{{user_name | quote }}"
