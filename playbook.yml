@@ -1,11 +1,11 @@
 - hosts: 127.0.0.1
   connection: local
   roles:
-    - sshkeyconfig
-    - exportfile
-    - databaseexport
-    - copyexportfiles
-    - plugins
+ #   - sshkeyconfig
+  #  - exportfile
+  #  - databaseexport
+  #  - copyexportfiles
+  #  - plugins
     - media
     
     
@@ -14,9 +14,9 @@
     #- wordpress
     #- woocommerce
     - mediaimport
-    - importplugins
-    - databaseimport
-    - wordpressimporterplugin
-    - moveexportfiles
-    - import_wordpress
+   # - importplugins
+   # - databaseimport
+   # - wordpressimporterplugin
+   # - moveexportfiles
+   # - import_wordpress
     - replication
