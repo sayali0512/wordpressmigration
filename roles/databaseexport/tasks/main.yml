@@ -2,7 +2,7 @@
 
 - name: Install MySQL 
   apt: 
-    name: "mysql-server"
+    name: mysql-server
     state: latest
   become: yes
 
