@@ -78,6 +78,10 @@ wordpress_url: https://wordpress.org/wordpress
 wordpress_path: /tmp/wordpress
 wp_salt_path: https://api.wordpress.org/secret-key/1.1/salt/
 
+replication_name: wordpress_replication.sh
+woocommerce_script_name: woocommerce.sh
+
+
 
 wordpress_url: https://wordpress.org/wordpress
 wp_salt_path: https://api.wordpress.org/secret-key/1.1/salt/
