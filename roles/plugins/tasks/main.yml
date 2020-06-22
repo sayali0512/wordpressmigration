@@ -1,0 +1,7 @@
+___
+-
+  command: /azlamp/html/lb-3lvmnp.eastus.cloudapp.azure.com/wp-content-plugins /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content-plugins
+  name: "copy plugins to  remote host"
+  
+- name: list of plugins 
+  command: 
