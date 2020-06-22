@@ -8,7 +8,10 @@
     group: "{{default_permission}}"
     copy: no
   become: yes
+ 
+- name: remove plugins
+  command: rm -r /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/
   
 - name: move plugins zip file
-  command: "mv /home/azureadmin/plugins/* /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/"
+  command: "mv /home/azureadmin/plugins/ /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/"
   become: yes
