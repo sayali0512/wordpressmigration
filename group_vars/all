@@ -5,17 +5,19 @@ auto_up_disable: true
 # user_name and domain_name values are updated at runtime with user input
 server_hostname: wordpress
 src_domain_name: lb-543smx.eastus.cloudapp.azure.com
-tar_domain_name: lb-yw23wf.eastus.cloudapp.azure.com
+tar_domain_name: 
 user_name: azureadmin
 vm_password: iTalent@27
-vm_ip: 52.188.211.243
+vm_ip: 40.65.225.181
 dns_name: domain
 wp_db_server_name_src: mysql-543smx.mysql.database.azure.com
 wp_db_user_src: dbadmin@mysql-543smx
 wp_db_password_src: iTalent@27
 wp_db_name_src: wordpress
-wp_db_server_name_tar: mysql-yw23wf.mysql.database.azure.com
-wp_db_user_tar: dbadmin@mysql-yw23wf
+
+
+wp_db_server_name_tar: mysql-nxi7pz.mysql.database.azure.com
+wp_db_user_tar: dbadmin@mysql-nxi7pz
 wp_db_password_tar: iTalent@27
 wp_db_name_tar: wordpress
 
@@ -51,12 +53,15 @@ wp_sha1sum: e5631f812232fbd45d3431783d3db2e0d5670d2d
 # Default_paths
 default_permission: www-data
 woocommerce_script_name: woocommerce.sh
-replication_name: replication.sh
+replication_name: wordpress_replication.sh
 
 webroot: /var/www/html
 wordpress_path: /tmp/wordpress
 
-
+wp_db_server_name_tar: mysql-nxi7pz.mysql.database.azure.com
+wp_db_user_tar: dbadmin@mysql-nxi7pz
+wp_db_password_tar: iTalent@27
+wp_db_name_tar: wordpressdb
 
 post_type: post,page,attachment,revision,nav_menu_item,custom_css,customize_changeset,oembed_cache,user_request,wp_block
 file_format: wordpress.xml
