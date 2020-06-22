@@ -5,7 +5,7 @@
    # - exportfile
    # - databaseexport
    # - copyexportfiles
-    - exportplugins
+    - plugins
     
     
 - hosts: webservers
