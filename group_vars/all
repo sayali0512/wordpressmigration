@@ -4,14 +4,14 @@ auto_up_disable: true
 
 # user_name and domain_name values are updated at runtime with user input
 server_hostname: wordpress
-src_domain_name: lb-543smx.eastus.cloudapp.azure.com
+src_domain_name: lb-3lvmnp.eastus.cloudapp.azure.com
 tar_domain_name: lb-yw23wf.eastus.cloudapp.azure.com
 user_name: azureadmin
 vm_password: iTalent@27
 vm_ip: 40.65.225.181
 dns_name: domain
-wp_db_server_name_src: mysql-543smx.mysql.database.azure.com
-wp_db_user_src: dbadmin@mysql-543smx
+wp_db_server_name_src: mysql-3lvmnp.mysql.database.azure.com
+wp_db_user_src: dbadmin@mysql-3lvmnp
 wp_db_password_src: iTalent@27
 wp_db_name_src: wordpress
 
