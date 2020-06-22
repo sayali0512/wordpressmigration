@@ -6,3 +6,4 @@
   unarchive:
     src: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/plugins.zip
     dest: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins
+    remote_src: yes
