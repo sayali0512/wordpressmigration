@@ -32,12 +32,12 @@
   
 - 
   name: create a database
-  command: mysql -h {{wp_db_server_name_src}} -u {{wp_db_user_src}} -p{{wp_db_password_src}} -e "CREATE DATABASE {{wp_db_name_src}} CHARACTER SET utf8;"
+  command: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} -e "CREATE DATABASE {{wp_db_name_tar}} CHARACTER SET utf8;"
   register: output
 
 - 
   name: grant user permission to database
-  command: mysql -h {{wp_db_server_name_src}} -u {{wp_db_user_src}} -p{{wp_db_password_src}} -e "GRANT ALL ON {{wp_db_name_src}}.* TO {{wp_db_user_id}} IDENTIFIED BY '{{wp_db_user_pass}}';"
+  command: mysql -h {{wp_db_server_name_tar}} -u {{wp_db_user_tar}} -p{{wp_db_password_tar}} -e "GRANT ALL ON {{wp_db_name_tar}}.* TO {{wp_db_user_id}} IDENTIFIED BY '{{wp_db_user_pass}}';"
   register: outputpremission
 
 - name: Move WordPress install files
@@ -61,9 +61,9 @@
     regexp: "{{ item.regexp }}"
     line: "{{ item.line }}"
   with_items:
-    - {'regexp': "define\\('DB_NAME', '(.)+'\\);", 'line': "define('DB_NAME', '{{wp_db_name_src}}');"}
-    - {'regexp': "define\\('DB_USER', '(.)+'\\);", 'line': "define('DB_USER', '{{wp_db_user_src}}');"}
-    - {'regexp': "define\\('DB_PASSWORD', '(.)+'\\);", 'line': "define('DB_PASSWORD', '{{wp_db_password_src}}');"}
+    - {'regexp': "define\\('DB_NAME', '(.)+'\\);", 'line': "define('DB_NAME', '{{wp_db_name_tar}}');"}
+    - {'regexp': "define\\('DB_USER', '(.)+'\\);", 'line': "define('DB_USER', '{{wp_db_user_tar}}');"}
+    - {'regexp': "define\\('DB_PASSWORD', '(.)+'\\);", 'line': "define('DB_PASSWORD', '{{wp_db_password_tar}}');"}
   become: yes
   no_log: true
   
@@ -84,4 +84,4 @@
   become: yes
 
 - name: install wordpress
-  command: "wp core install --url='http://{{src_domain_name}}' --title='{{wp_title}}' --admin_user='{{wp_admin_user}}' --admin_password='{{wp_admin_password}}' --admin_email='{{wp_admin_email}}' --path='{{webroot}}/{{wordpress_dir}}'"
+  command: "wp core install --url='http://{{tar_domain_name}}' --title='{{wp_title}}' --admin_user='{{wp_admin_user}}' --admin_password='{{wp_admin_password}}' --admin_email='{{wp_admin_email}}' --path='{{webroot}}/{{wordpress_dir}}'"
