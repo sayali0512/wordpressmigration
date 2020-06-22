@@ -1,5 +1,0 @@
-- name: move plugins zip file
-  command: mv /home/{{user_name}}/plugins.zip  {{tar_wordpress_path}}/wp-content/plugins
-  become: true 
-
-- 
