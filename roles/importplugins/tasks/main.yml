@@ -8,7 +8,7 @@
 - name: import plugins.zip
   unarchive:
     src: /home/azureadmin/plugins.zip
-    dest: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/
+    dest: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/
     owner: "{{default_permission}}"
     group: "{{default_permission}}"
     copy: no
