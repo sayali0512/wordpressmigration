@@ -7,6 +7,7 @@
     owner: "{{default_permission}}"
     group: "{{default_permission}}"
     copy: no
+   become: yes
   
 - name: move plugins zip file
   command: sudo cp -rf /home/azureadmin/plugins/* /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/
