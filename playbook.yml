@@ -4,15 +4,15 @@
     - sshkeyconfig
     - wordpress
     - woocommerce
-    - export
-    - databaseexport
-    - copyexportfile
+  #  - export
+ #   - databaseexport
+   # - copyexportfile
     
     
 - hosts: webservers
   roles:
-     - databaseimport
-     - wordpressimporter
-     - moveexportfiles
-     - importwordpress
+    # - databaseimport
+    # - wordpressimporter
+    # - moveexportfiles
+     #- importwordpress
      - replication
