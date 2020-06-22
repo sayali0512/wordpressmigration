@@ -1,9 +1,9 @@
 - name: move plugins zip file
-  command: mv /home/{{user_name}}/plugins.zip  /{{tar_wordpress_path}}/wp-content/plugins
+  command: mv /home/{{user_name}}/plugins.zip  /{{tar_wordpress_path}}/wp-content/plugins/plugins_temp
   become: true 
 
 - name: Extract plugins.zip
   unarchive:
-    src: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/plugins.zip
-    dest: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins
+    src: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/plugins_temp/plugins.zip
+    dest: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/plugins_temp
     remote_src: yes
