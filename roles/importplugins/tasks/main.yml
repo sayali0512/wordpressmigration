@@ -2,6 +2,8 @@
 
 - name: remove plugins
   command: rm -r /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/
+  become: yes
+
 
 - name: import plugins.zip
   unarchive:
@@ -14,6 +16,7 @@
   
 - name: change permissions
   command: chown www-data:www-data /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins
+  become: yes
  
 
 
