@@ -2,9 +2,9 @@
   connection: local
   roles:
     - sshkeyconfig
-    - export
+    - exportfile
     - databaseexport
-    - copyexportfile
+    - copyexportfiles
     
     
 #- hosts: webservers
