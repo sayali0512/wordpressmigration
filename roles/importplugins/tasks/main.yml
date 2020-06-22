@@ -1,5 +1,8 @@
 - name: move plugins zip file
-  command: mv /home/{{user_name}}/plugins.zip  {{tar_wordpress_path}}/wp-content/plugins
+  command: mv /home/{{user_name}}/plugins.zip  /{{tar_wordpress_path}}/wp-content/plugins
   become: true 
 
-- 
+- name: Extract foo.tgz into /var/lib/foo
+  unarchive:
+    src: /{{tar_wordpress_path}}/wp-content/plugins/plugins.zip
+    dest: /{{tar_wordpress_path}}/wp-content/plugins/plugins.zip
