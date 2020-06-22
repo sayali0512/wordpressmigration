@@ -32,7 +32,7 @@
   
 - 
   name: create a database
-  command: mysql -h {{wp_db_server_name}} -u {{wp_db_user}} -p{{wp_db_password}} -e "CREATE DATABASE {{wp_db_name}} CHARACTER SET utf8;"
+  command: mysql -h {{wp_db_server_name_src}} -u {{wp_db_user_src}} -p{{wp_db_password_src}} -e "CREATE DATABASE {{wp_db_name_src}} CHARACTER SET utf8;"
   register: output
 
 - 
