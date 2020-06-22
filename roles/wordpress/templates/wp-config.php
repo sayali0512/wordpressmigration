@@ -12,16 +12,16 @@
 
 // ** Azure Database for MySQL server settings - You can get the following details from Azure Portal** //
 /** Database name for WordPress */
-define('DB_NAME', '{{ wp_db_name }}');
+define('DB_NAME', '{{wp_db_name_tar}}');
 
 /** username for MySQL database */
-define('DB_USER', '{{ wp_db_user }}');
+define('DB_USER', '{{wp_db_user_tar}}');
 
 /** password for MySQL database */
-define('DB_PASSWORD', '{{ wp_db_password }}');
+define('DB_PASSWORD', '{{wp_db_password_tar}}');
 
 /** Azure Database for MySQL server hostname */
-define('DB_HOST', '{{wp_db_server_name}}');
+define('DB_HOST', '{{wp_db_server_name_tar}}');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
