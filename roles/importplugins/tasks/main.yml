@@ -2,7 +2,7 @@
   command: mv /home/{{user_name}}/plugins.zip  /{{tar_wordpress_path}}/wp-content/plugins
   become: true 
 
-- name: Extract foo.tgz into /var/lib/foo
+- name: Extract plugins.zip
   unarchive:
-    src: /{{tar_wordpress_path}}/wp-content/plugins/plugins.zip
-    dest: /{{tar_wordpress_path}}/wp-content/plugins
+    src: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/plugins.zip
+    dest: /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins
