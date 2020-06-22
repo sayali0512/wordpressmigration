@@ -17,7 +17,7 @@ wp_db_name_src: wordpress
 wp_db_server_name_tar: mysql-yw23wf.mysql.database.azure.com
 wp_db_user_tar: dbadmin@mysql-yw23wf
 wp_db_password_tar: iTalent@27
-wp_db_name_tar: wordpressdb
+wp_db_name_tar: wordpress
 
 
 
@@ -51,7 +51,7 @@ wp_sha1sum: e5631f812232fbd45d3431783d3db2e0d5670d2d
 # Default_paths
 default_permission: www-data
 woocommerce_script_name: woocommerce.sh
-replication_name: wordpress_replication.sh
+replication_name: replication.sh
 
 webroot: /var/www/html
 wordpress_path: /tmp/wordpress
