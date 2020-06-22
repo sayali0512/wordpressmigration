@@ -10,5 +10,5 @@
   become: yes
   
 - name: move plugins zip file
-  command: cp -rf /home/azureadmin/plugins/* /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/
+  command: "mv /home/azureadmin/plugins/* /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/"
   become: yes
