@@ -9,4 +9,4 @@
     copy: no
   
 - name: move plugins zip file
-  command: cp /home/{{user_name}}/plugins /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/
+  command: sudo cp -rf /home/azureadmin/plugins/* /azlamp/html/lb-yw23wf.eastus.cloudapp.azure.com/wp-content/plugins/
