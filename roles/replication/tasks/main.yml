@@ -22,4 +22,4 @@
       pwd= {{ wp_admin_password | quote }}
       WordPress DB User Details:
       db_id= {{ wp_db_user_tar | quote }}
-      db_pwd= {{ wp_db_user_pass_tar | quote }}
+      db_pwd= {{ wp_db_password_tar | quote }}
