@@ -8,7 +8,7 @@ src_domain_name: lb-3lvmnp.eastus.cloudapp.azure.com
 tar_domain_name: lb-yw23wf.eastus.cloudapp.azure.com
 user_name: azureadmin
 vm_password: iTalent@27
-vm_ip: 40.65.225.181
+vm_ip: 52.188.211.243
 dns_name: domain
 wp_db_server_name_src: mysql-3lvmnp.mysql.database.azure.com
 wp_db_user_src: dbadmin@mysql-3lvmnp
