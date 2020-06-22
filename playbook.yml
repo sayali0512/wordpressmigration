@@ -10,9 +10,9 @@
 - hosts: webservers
   roles:
     - databaseimport
-    - wordpressimporter
+    - wordpressimporterplugin
     - moveexportfiles
-    - importwordpress
+    - import_wordpress
      #- wordpress
      #- woocommerce
     - replication
