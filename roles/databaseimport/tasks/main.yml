@@ -22,4 +22,4 @@
   args: 
     executable: /bin/bash
   name: "Run a sql_dump.sh script with arguments (using 'cmd' parameter)"
-  shell: "/home/{{ user_name | quote }}/{{ sql_dump_script_name | quote }} {{ wp_db_name_tar | quote }}"
+  shell: "/home/{{ user_name | quote }}/{{ sql_dump_script_name | quote }} {{ wp_db_name_tar_new | quote }}"
