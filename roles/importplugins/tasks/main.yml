@@ -1,4 +1,4 @@
-
+---
 
 - name: import plugins.zip
   unarchive:
