@@ -1,6 +1,6 @@
 
 
-- name: Extract plugins.zip
+- name: import plugins.zip
   unarchive:
     src: /home/azureadmin/plugins.zip
     dest: /home/azureadmin/
