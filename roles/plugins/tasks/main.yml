@@ -1,5 +1,5 @@
 ---
-- name: Create a zip archive of /path/to/foo
+- name: Create a zip file
   archive:
     path: /azlamp/html/lb-3lvmnp.eastus.cloudapp.azure.com/wp-content/plugins
     format: zip
