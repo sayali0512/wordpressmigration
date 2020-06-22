@@ -25,8 +25,8 @@ wp_db_name_tar: wordpress
 
 
 # Password will be auto generated
-wp_admin_password: 
-wp_db_user_pass:
+wp_admin_password: LiRxE7cg
+wp_db_user_pass: rzmY0su_
 
 wordpress_dir: wordpress
 wp_title: LAMP-WordPress
