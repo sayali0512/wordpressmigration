@@ -14,6 +14,8 @@ wp_db_server_name_src: mysql-3lvmnp.mysql.database.azure.com
 wp_db_user_src: dbadmin@mysql-3lvmnp
 wp_db_password_src: iTalent@27
 wp_db_name_src: wordpress
+wp_db_name_tar_new: wordpress22
+
 
 
 wp_db_server_name_tar: mysql-yw23wf.mysql.database.azure.com
