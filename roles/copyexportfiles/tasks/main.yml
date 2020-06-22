@@ -2,10 +2,10 @@
 - 
   command: scp {{xml_path}}/wordpress.xml {{user_name}}@{{vm_ip}}:/home/{{user_name}}
   name: "copy xml file to remote host" 
-  no_log: false
+  #no_log: false
   
 - 
   command: scp /home/{{user_name}}/database.sql {{user_name}}@{{vm_ip}}:/home/{{user_name}}
   name: "copy .sql file to remote host" 
-  no_log: false
+  #no_log: false
   
