@@ -10,11 +10,11 @@
     
 - hosts: webservers
   roles:
+    #- wordpress
+    #- woocommerce
     - importplugins
     - databaseimport
     - wordpressimporterplugin
     - moveexportfiles
     - import_wordpress
-     #- wordpress
-     #- woocommerce
     - replication
