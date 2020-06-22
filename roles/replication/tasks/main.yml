@@ -13,13 +13,13 @@
   args:
     executable: /bin/bash
 
-- name: Create wordpress.txt file for user
-  copy:
-    dest: "/home/{{ user_name | quote }}/wordpress.txt"
-    content: |
-      WordPress Site Details:
-      uid= {{ wp_admin_user | quote }}
-      pwd= {{ wp_admin_password | quote }}
-      WordPress DB User Details:
-      db_id= {{ wp_db_user_tar | quote }}
-      db_pwd= {{ wp_db_password_tar | quote }}
+#- name: Create wordpress.txt file for user
+ # copy:
+  #  dest: "/home/{{ user_name | quote }}/wordpress.txt"
+   # content: |
+    #  WordPress Site Details:
+     # uid= {{ wp_admin_user | quote }}
+      #pwd= {{ wp_admin_password | quote }}
+      #WordPress DB User Details:
+     # db_id= {{ wp_db_user_tar | quote }}
+     # db_pwd= {{ wp_db_password_tar | quote }}
