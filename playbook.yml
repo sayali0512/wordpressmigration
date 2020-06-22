@@ -2,15 +2,17 @@
   connection: local
   roles:
     - sshkeyconfig
+    - wordpress
+    - woocommerce
     - export
     - databaseexport
-    - copyxmlfile
+    - copyexportfile
     
     
 - hosts: webservers
   roles:
-     #- databaseimport
+     - databaseimport
      - wordpressimporter
-     - movexmlfile
+     - moveexportfiles
      - importwordpress
      - replication
