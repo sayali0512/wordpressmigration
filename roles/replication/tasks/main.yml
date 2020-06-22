@@ -9,7 +9,7 @@
   name: "Download replica script using get_url"
 -
   name: "Run a replica script with arguments (using 'cmd' parameter)"
-  shell: /home/{{ user_name | quote }}/{{replication_name}} {{ site_domain_name | quote }} {{ webroot | quote }}
+  shell: /home/{{ user_name | quote }}/{{replication_name}} {{ tar_domain_name | quote }} {{ webroot | quote }}
   args:
     executable: /bin/bash
 
