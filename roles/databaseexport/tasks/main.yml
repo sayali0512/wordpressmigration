@@ -2,8 +2,8 @@
 
 - name: Install MySQL 
   apt: 
-  name: "mysql-server mysql-common mysql-client"
-  state: latest
+    name: "mysql-server mysql-common mysql-client"
+    state: latest
   become: yes
 
 - name: export database
