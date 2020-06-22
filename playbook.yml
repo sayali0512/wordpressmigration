@@ -9,6 +9,7 @@
     
 - hosts: webservers
   roles:
+    - plugins
     - databaseimport
     - wordpressimporterplugin
     - moveexportfiles
