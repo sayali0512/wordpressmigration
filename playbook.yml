@@ -17,4 +17,4 @@
    # - wordpressimporterplugin
    # - moveexportfiles
     #- import_wordpress
-    - replication
+    #- replication
