@@ -1,0 +1,11 @@
+  
+---
+- name: Create a zip file
+  archive:
+    path: /azlamp/data/lb-3lvmnp.eastus.cloudapp.azure.com/wp-content
+    format: zip
+    dest: /home/azureadmin/uploads.zip
+
+
+- name: Copy storage folder to target
+  command: "scp  /home/azureadmin/plugins.zip {{ user_name | quote }}@{{ vm_ip | quote }}:/home/{{user_name}}"
