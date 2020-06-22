@@ -1,21 +1,17 @@
 <?php
 /**
- * The base configurations of the WordPress.
+ * Following configration file will be updated in the wordpress folder in runtime 
  *
- * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, WordPress Language, and ABSPATH. You can find more information
- * by visiting {@link http://codex.wordpress.org/Editing_wp-config.php Editing
- * wp-config.php} Codex page. You can get the MySQL settings from your web host.
+ * Following configurations: Azure Database for MySQL server settings, Table Prefix,
+ * Secret Keys, WordPress Language, and ABSPATH. 
+ * 
+ * wp-config.php  file is used during the installation.
+ * Copy the wp-config file to wordpress folder.
  *
- * This file is used by the wp-config.php creation script during the
- * installation. You don't have to use the web site, you can just copy this file
- * to "wp-config.php" and fill in the values.
- *
- * @package WordPress
  */
 
-// ** MySQL settings - You can get the following details from user interface** //
-/** The name of the database for WordPress */
+// ** Azure Database for MySQL server settings - You can get the following details from Azure Portal** //
+/** Database name for WordPress */
 define('DB_NAME', '{{ wp_db_name }}');
 
 /** username for MySQL database */
@@ -24,8 +20,8 @@ define('DB_USER', '{{ wp_db_user }}');
 /** password for MySQL database */
 define('DB_PASSWORD', '{{ wp_db_password }}');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+/** Azure Database for MySQL server hostname */
+define('DB_HOST', '{{wp_db_server_name}}');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -33,44 +29,33 @@ define('DB_CHARSET', 'utf8');
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
 
-/**#@+
+/**
  * Authentication Unique Keys and Salts.
- *
- * Change these to different unique phrases!
- * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
- * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
- *
- * @since 2.6.0
+ * You can generate unique keys and salts at https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service
+ * You can change these at any point in time to invalidate all existing cookies.
  */
 
 {{ wp_salt.stdout }}
 
-/**#@-*/
-
 /**
  * WordPress Database Table prefix.
  *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
+ * You can have multiple installations in one database if you give each a unique prefix.
+ * Only numbers, letters, and underscores are allowed.
  */
 $table_prefix  = 'wp_';
 
 /**
- * WordPress Localized Language, defaults to English.
+ * WordPress Localized Language, defaults language is English.
  *
- * Change this to localize WordPress. A corresponding MO file for the chosen
- * language must be installed to wp-content/languages. For example, install
- * de_DE.mo to wp-content/languages and set WPLANG to 'de_DE' to enable German
- * language support.
+ * A corresponding MO file for the chosen language must be installed to wp-content/languages. 
  */
 define('WPLANG', '');
 
 /**
  * For developers: Debugging mode for WordPress.
- *
- * Change this to true to enable the display of notices during development.
- * It is strongly recommended that plugin and theme developers use WP_DEBUG
- * in their development environments.
+ * Change WP_DEBUG to true to enable the display of notices during development.
+ * It is strongly recommended that plugin and theme developers use WP_DEBUG in their development environments.
  */
 define('WP_DEBUG', false);
 
@@ -80,11 +65,12 @@ define( 'AUTOMATIC_UPDATER_DISABLED', {{auto_up_disable}} );
 /** Define AUTOMATIC Updates for Components. */
 define( 'WP_AUTO_UPDATE_CORE', {{core_update_level}} );
 
-/* That's all, stop editing! Happy blogging. */
-
 /** Absolute path to the WordPress directory. */
 if ( !defined('ABSPATH') )
   define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
+
+/** Avoid FTP credentails. */
+define('FS_METHOD','direct');
