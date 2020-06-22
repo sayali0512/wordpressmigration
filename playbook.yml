@@ -5,11 +5,12 @@
     - exportfile
     - databaseexport
     - copyexportfiles
+    - exportplugins
     
     
 - hosts: webservers
   roles:
-    - plugins
+    - importplugins
     - databaseimport
     - wordpressimporterplugin
     - moveexportfiles
