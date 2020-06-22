@@ -2,7 +2,7 @@
 ---
 - name: Create a zip file
   archive:
-    path: /azlamp/data/lb-3lvmnp.eastus.cloudapp.azure.com/wp-content
+    path: /azlamp/data/lb-3lvmnp.eastus.cloudapp.azure.com/wp-content/uploads
     format: zip
     dest: /home/azureadmin/uploads.zip
 
