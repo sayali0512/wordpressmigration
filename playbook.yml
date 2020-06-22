@@ -2,8 +2,6 @@
   connection: local
   roles:
     - sshkeyconfig
-    - wordpress
-    - woocommerce
   #  - export
  #   - databaseexport
    # - copyexportfile
