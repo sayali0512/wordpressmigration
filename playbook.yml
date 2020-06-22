@@ -6,12 +6,14 @@
     - databaseexport
     - copyexportfiles
     - plugins
+    - media
     
     
 - hosts: webservers
   roles:
     #- wordpress
     #- woocommerce
+    - mediaimport
     - importplugins
     - databaseimport
     - wordpressimporterplugin
