@@ -7,12 +7,12 @@
     - copyexportfiles
     
     
-#- hosts: webservers
-#  roles:
-    # - databaseimport
-    # - wordpressimporter
-    # - moveexportfiles
-     #- importwordpress
+- hosts: webservers
+  roles:
+    - databaseimport
+    - wordpressimporter
+    - moveexportfiles
+    - importwordpress
      #- wordpress
      #- woocommerce
-     #- replication
+    - replication
