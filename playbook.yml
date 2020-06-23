@@ -11,12 +11,12 @@
     
 - hosts: webservers
   roles:
-    - wordpress
+    #- wordpress
     #- woocommerce
-    - mediaimport
-    - importplugins
     - databaseimport
     - wordpressimporterplugin
     - moveexportfiles
+    - mediaimport
+    - importplugins
     - import_wordpress
     - replication
